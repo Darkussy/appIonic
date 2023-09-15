@@ -55,9 +55,10 @@
   
   <ion-content class="ion-padding">
     <ion-card>
-      <img class="img_qr" alt="Silhouette of mountains" 
-      src="https://static.vecteezy.com/system/resources/previews/011/912/759/non_2x/scan-qr-code-camera-view-capturing-digital-code-with-technology-of-identifying-application-and-goods-online-barcode-information-with-ability-to-check-and-verify-web-reader-on-smartphone-vector.jpg" />
-          
+      <div class="container">
+        <img class="img_qr" alt="Silhouette of mountains" 
+        src="https://cdn.cryptobrowser.site/images/2022-11-11/qr1.png"/>
+      </div>   
       <ion-card-content>
         <ion-button id="present-alert" size="small" shape="round" > Registrar Clase </ion-button>
       </ion-card-content>
@@ -66,7 +67,8 @@
     <ion-alert
       trigger="present-alert"
       header="Clase registrada"
-      subHeader="Haz sido registrado en la clase correctamente.¡Ya estas presente el dia de hoy! " 
+      subHeader="Haz sido registrado en la clase correctamente. "
+      message="¡Ya estas presente el dia de hoy!"
       cssClass="alert-multiline"
       [buttons]="alertButtons"
     >

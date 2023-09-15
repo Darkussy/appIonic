@@ -82,12 +82,20 @@
       <ion-list id="formulario">
         <ion-label id="sub">Informacion Clase</ion-label><br>
         <!-- ---------------------- -->
-        <ion-input [(ngModel)]="clase.fecha" type="date" expand="full" label="Fecha Nacimiento"
+        <ion-input [(ngModel)]="clase.fecha" type="date" expand="full" label=" Fecha "
           placeholder="Ingrese Fecha" slot="start">
         </ion-input>
         <!-- ---------------------- -->
-        <ion-input [(ngModel)]="clase.nombre_clase" type="text" expand="full" label="Clase" placeholder="Ingrese Nombre clase"
-          slot="start"></ion-input>
+        <!-- <ion-input [(ngModel)]="clase.nombre_clase" type="text" expand="full" label="Clase" placeholder="Ingrese Nombre clase"
+          slot="start"></ion-input> -->
+          <!-- ---------------------- -->
+        <ion-select [(ngModel)]="clase.nombre_clase" label="Clase " interface="action-sheet"
+        placeholder="Seleccione Opcion" slot="center">
+        <ion-select-option value="Arquitectura">Arquitectura</ion-select-option>
+        <ion-select-option value="Diseño_y_gestion_de_requisitos">Diseño y gestion de requisitos</ion-select-option>
+        <ion-select-option value="Ingenieria_de_software">Ingenieria de software</ion-select-option>
+        
+      </ion-select>
           <!-- ---------------------- -->
         <ion-select [(ngModel)]="clase.seccion" label="Seccion " interface="action-sheet"
           placeholder="Seleccione Opcion" slot="center">
@@ -107,10 +115,13 @@
         </ion-button>
       </ion-list>
     </div>
-    <ion-alert trigger="present-alert" header="Detalles clase"
+
+    <ion-alert trigger="present-alert" 
+    header="Detalles clase"
     subHeader="La fecha es: {{clase.fecha}}, 
     nombre de la clase: {{clase.nombre_clase}}
     seccion de la clase: {{clase.seccion}}" 
+    mesagge="hola \n mundo"
     [buttons]="alertButtons"></ion-alert>
 
 
