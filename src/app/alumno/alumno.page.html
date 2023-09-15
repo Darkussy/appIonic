@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
@@ -19,5 +19,57 @@
     </h1>
     <ion-label>Usuario: {{user.usuario}}</ion-label>
     <br><br>
+    
   </div>
-</ion-content>
+
+  
+</ion-content> -->
+
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Opciones</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      
+      <!-- Agrega el ion-back-button al lado izquierdo -->
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <!--  -->
+      <ion-title>Asistencia</ion-title>
+      <!--  -->
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <!--  -->
+    </ion-toolbar>
+    <!--  -->
+  </ion-header>
+  
+  
+  <ion-content class="ion-padding">
+    <ion-card>
+      <img class="img_qr" alt="Silhouette of mountains" 
+      src="https://static.vecteezy.com/system/resources/previews/011/912/759/non_2x/scan-qr-code-camera-view-capturing-digital-code-with-technology-of-identifying-application-and-goods-online-barcode-information-with-ability-to-check-and-verify-web-reader-on-smartphone-vector.jpg" />
+          
+      <ion-card-content>
+        <ion-button id="present-alert" size="small" shape="round" > Registrar Clase </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-alert
+      trigger="present-alert"
+      header="Clase registrada"
+      subHeader="Haz sido registrado en la clase correctamente.¡Ya estas presente el dia de hoy! " 
+      cssClass="alert-multiline"
+      [buttons]="alertButtons"
+    >
+  </ion-alert>
+  </ion-content>
+</div>

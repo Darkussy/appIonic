@@ -16,6 +16,11 @@ export class ProfesorPage implements OnInit {
     usuario: "",
     password: ""
   }
+  public clase = {
+    fecha: "",
+    nombre_clase:"",
+    seccion:""
+  }
 
   ngOnInit() {
     this.activatedRouter.queryParams.subscribe(() => {

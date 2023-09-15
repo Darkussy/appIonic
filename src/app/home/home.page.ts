@@ -16,7 +16,20 @@ export class HomePage {
 
   constructor(private router: Router) {}
   public mensaje = ""
-  public alertButtons = ['OK'];
+  public alertButtons = [
+    {
+      text: 'Cancel',
+      role: 'cancel',
+      
+    },
+    {
+      text: 'OK',
+      role: 'confirm',
+      handler: () => {
+        this.router.navigate(['/recuperar']);
+      }
+    }
+  ];
   
   user = {
     usuario: "",
