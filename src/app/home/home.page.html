@@ -8,8 +8,8 @@
 
   <div id="container">
     <ion-avatar id="avatar" #avatar>
-      <img alt="Silhouette of a person's head"
-        src="https://img2.freepng.es/20180331/eow/kisspng-computer-icons-user-clip-art-user-5abf13db298934.2968784715224718991702.jpg" />
+      <img src="https://i.pinimg.com/originals/4a/0c/6d/4a0c6d09f0e492b8a463d21ab58a39a1.jpg"
+        alt="Silhouette of a person's head" />
     </ion-avatar>
     <ion-card>
       <ion-card-header>
@@ -30,22 +30,11 @@
           <ion-item>
             <ion-toggle aria-label="Success toggle" color="success" [checked]="true">Recuerdame</ion-toggle>
           </ion-item><br>
-          <!-- <ion-item>
-            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-          </ion-item> -->
           <ion-button (click)="enviarInformacion()" size="small" shape="round">Conectar</ion-button><br>
           <br>
-          <ion-button id="open-modal" shape="round" size="small">
-            Registrarse
-          </ion-button><br>
-          <!--  
-          <ion-button [routerLink]="['/login']" shape="round" size="small">
-            Redirect
-          </ion-button><br>
-          -->
-          <!-- <ion-button (click)="playAvatar()" size="small" shape="round">
-            Animar
-          </ion-button> -->
+          <ion-button id="present-alert">
+            Recuperar Contraseña
+          </ion-button>
           <div>
 
             <h1>{{mensaje}}</h1><br>
@@ -54,9 +43,14 @@
       </ion-card-content>
     </ion-card>
 
-
-    <ion-alert trigger="present-alert" header="Registro" subHeader="{{mensaje}}" 
-      [buttons]="alertButtons"></ion-alert> 
+    <ion-alert trigger="present-alert" header="Registro" 
+      subHeader="Ingresa tu e-mail para recuperar tu Contraseña" 
+      [buttons]="alertButtons"
+    >
+      <ion-input label="E-mail" type="password" labelPlacement="floating"
+      placeholder="Ingrese su Contraseña">
+    </ion-input>
+    </ion-alert>  
     <!-- Modal Section Begin -->
     <!-- <ion-modal trigger="open-modal">
       <ng-template>

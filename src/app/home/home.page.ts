@@ -17,7 +17,7 @@ export class HomePage {
   constructor(private router: Router) {}
   public mensaje = ""
   public alertButtons = ['OK'];
-
+  
   user = {
     usuario: "",
     password: ""
@@ -25,10 +25,22 @@ export class HomePage {
 
   enviarInformacion() {
     if (this.user.usuario != "") {
-      let navigationExtras: NavigationExtras = {
-        state: { user: this.user }
+      if(this.user.usuario.includes("@duocuc.cl")){
+        let navigationExtras: NavigationExtras = {
+          state: { user: this.user }
+        }
+        this.router.navigate(['/alumno'], navigationExtras);
+
+      }else if(this.user.usuario.includes("@profesor.duoc.cl")){
+        let navigationExtras: NavigationExtras = {
+          state: { user: this.user }
+        }
+        this.router.navigate(['/profesor'], navigationExtras);
+
+      }else{
+        this.mensaje = "Debe ingresar un correo valido de duoc";
+
       }
-      this.router.navigate(['/login'], navigationExtras);
     } else {
       this.mensaje = "Debe ingresar sus credenciales";
     }
