@@ -1,11 +1,7 @@
 
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    
   </ion-header>
-
-
   <div id="container">
     <ion-avatar id="avatar" #avatar>
       <img src="https://i.pinimg.com/originals/4a/0c/6d/4a0c6d09f0e492b8a463d21ab58a39a1.jpg"
@@ -18,15 +14,25 @@
       <ion-card-content>
         <ion-list>
 
-          <ion-item>
+          <!-- <ion-item>
             <ion-input [(ngModel)]="user.usuario" label="Nombre Usuario" labelPlacement="floating"
               placeholder="Ingrese su Usuario"></ion-input>
-          </ion-item>
+          </ion-item> -->
+          <!--  -->
           <ion-item>
-            <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
+            <ion-label position="floating">Nombre usuario</ion-label>
+            <ion-input [(ngModel)]="user.usuario"  labelPlacement="floating"
+            placeholder="Ingrese su Usuario"> </ion-input>
+          </ion-item>
+          <!--  -->
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input [(ngModel)]="user.password" type="password" labelPlacement="floating"
               placeholder="Ingrese su Contraseña">
             </ion-input>
           </ion-item>
+          <!--  -->
+          
           <ion-item>
             <ion-toggle aria-label="Success toggle" color="success" [checked]="true">Recuerdame</ion-toggle>
           </ion-item><br>
@@ -51,7 +57,7 @@
   </div>
   <ion-alert
       trigger="present-alert"
-      header="Registro"
+      header="Recuperar Contraseña "
       subHeader="Ingresa tu e-mail para recuperar tu Contraseña" 
       [buttons]="alertButtons"
     >

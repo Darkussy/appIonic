@@ -1,23 +1,68 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title size="small" >Recuperar</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Recuperar</ion-title>
-      
+      <ion-title>Opciones</ion-title>
     </ion-toolbar>
   </ion-header>
-  <div id="container">
-    <h1 id="titulo">
-      Bienvenido!
-    </h1>
-    <br>
-  </div>  
-</ion-content>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      
+      <!-- Agrega el ion-back-button al lado izquierdo -->
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <!--  -->
+      <ion-title>Asistencia</ion-title>
+      <!--  -->
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <!--  -->
+    </ion-toolbar>
+    <!--  -->
+  </ion-header>
+  
+  
+  <ion-content class="ion-padding">
+    <ion-card>
+      <div class="container">
+        <ion-card-title>Restablecer Contraseña</ion-card-title>
+        <ion-list>
+          <!--  -->
+          <ion-item>
+            <ion-label position="floating">Nueva Contraseña</ion-label>
+            <ion-input [(ngModel)]="Contra.Nueva" labelPlacement="floating"
+            placeholder="Ingrese su Usuario"> </ion-input>
+          </ion-item>
+          <!--  -->
+          <ion-item>
+            <ion-label position="floating">Repetir Contraseña</ion-label>
+            <ion-input [(ngModel)]="Contra.Confirmacion"  type="password" labelPlacement="floating"
+              placeholder="Repita su Contraseña nueva ">
+            </ion-input>
+          </ion-item>   
+          <!--  --> 
+          <ion-button expand="block" color="warning" id="conectar" (click)="Validacion()"  shape="round">Restablecer</ion-button><br>
+          <br>
+        </ion-list>
+      </div>    
+      <ion-card-content>
+        
+      </ion-card-content>
+    </ion-card>
+
+    <!-- <ion-alert
+      trigger="present-alert"
+      header="Clase registrada"
+      subHeader="Haz sido registrado en la clase correctamente. "
+      message="¡Ya estas presente el dia de hoy!"
+      cssClass="alert-multiline"
+      [buttons]="alertButtons"
+    > 
+  </ion-alert> -->
+  </ion-content>
+</div>

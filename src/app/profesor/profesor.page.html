@@ -3,29 +3,6 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Profesor</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Profesor</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <div id="container">
-    <h1 id="titulo">
-      Bienvenido!
-    </h1>
-    <ion-label>Usuario: {{user.usuario}}</ion-label><br><br>
-  </div>
-</ion-content> -->
-
-<!-- <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
     <ion-title>Alumno</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -65,7 +42,7 @@
         <ion-back-button defaultHref="/"></ion-back-button>
       </ion-buttons>
       <!--  -->
-      <ion-title>Registo Clase</ion-title>
+      <ion-title>Asistencia</ion-title>
       <!--  -->
       <ion-buttons slot="end">
         <ion-menu-button></ion-menu-button>
@@ -74,57 +51,27 @@
     </ion-toolbar>
     <!--  -->
   </ion-header>
-  <div class="container">
-
-  </div>
+  
+  
   <ion-content class="ion-padding">
-    <div class="container">
-      <ion-list id="formulario">
-        <ion-label id="sub">Informacion Clase</ion-label><br>
-        <!-- ---------------------- -->
-        <ion-input [(ngModel)]="clase.fecha" type="date" expand="full" label="Fecha Nacimiento"
-        placeholder="Ingrese Fecha" slot="start">
-      </ion-input>
-        <!-- ---------------------- -->
-        <!-- <ion-input [(ngModel)]="clase.nombre_clase" type="text" expand="full" label="Clase" placeholder="Ingrese Nombre clase"
-          slot="start"></ion-input> -->
-          <!-- ---------------------- -->
-        <ion-select [(ngModel)]="clase.nombre_clase" label="Clase " interface="action-sheet"
-        placeholder="Seleccione Opcion" slot="center">
-        <ion-select-option value="Arquitectura">Arquitectura</ion-select-option>
-        <ion-select-option value="Diseño_y_gestion_de_requisitos">Diseño y gestion de requisitos</ion-select-option>
-        <ion-select-option value="Ingenieria_de_software">Ingenieria de software</ion-select-option>
-        
-      </ion-select>
-          <!-- ---------------------- -->
-        <ion-select [(ngModel)]="clase.seccion" label="Seccion " interface="action-sheet"
-          placeholder="Seleccione Opcion" slot="center">
-          <ion-select-option value="001D">001D</ion-select-option>
-          <ion-select-option value="002D">002D</ion-select-option>
-          <ion-select-option value="003D">003D</ion-select-option>
-          <ion-select-option value="004D">004D</ion-select-option>
-          <ion-select-option value="004D">005D</ion-select-option>
-          <ion-select-option value="004D">006D</ion-select-option>
-          <ion-select-option value="004D">007D</ion-select-option>
-          <ion-select-option value="004D">008D</ion-select-option>
-        </ion-select>
-        
-        <!-- ---------------------- -->
-        <ion-button id="present-alert">
-          Iniciar Clase
-        </ion-button>
-      </ion-list>
-    </div>
+    <ion-card>
+      <div class="container">
+        <img class="img_qr" alt="Silhouette of mountains" 
+        src="https://cdn.cryptobrowser.site/images/2022-11-11/qr1.png"/>
+      </div>   
+      <ion-card-content>
+        <ion-button id="present-alert" size="small" shape="round" > Registrar Clase </ion-button>
+      </ion-card-content>
+    </ion-card>
 
-    <ion-alert trigger="present-alert" 
-    header="Detalles clase"
-    subHeader="La fecha es: {{clase.fecha}}, 
-    nombre de la clase: {{clase.nombre_clase}}
-    seccion de la clase: {{clase.seccion}}" 
-    mesagge="hola \n mundo"
-    [buttons]="alertButtons"></ion-alert>
-
-
+    <ion-alert
+      trigger="present-alert"
+      header="Clase registrada"
+      subHeader="Haz sido registrado en la clase correctamente. "
+      message="¡Ya estas presente el dia de hoy!"
+      cssClass="alert-multiline"
+      [buttons]="alertButtons"
+    >
+  </ion-alert>
   </ion-content>
 </div>
-

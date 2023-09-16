@@ -19,8 +19,7 @@ export class HomePage {
   public alertButtons = [
     {
       text: 'Cancel',
-      role: 'cancel',
-      
+      role: 'cancel'
     },
     {
       text: 'OK',
