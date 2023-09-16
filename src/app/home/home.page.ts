@@ -38,13 +38,13 @@ export class HomePage {
 
   enviarInformacion() {
     if (this.user.usuario != "") {
-      if(this.user.usuario.includes("@duocuc.cl")){
+      if(this.user.usuario.includes("@duocuc.cl") && this.user.password != "" ){
         let navigationExtras: NavigationExtras = {
           state: { user: this.user }
         }
         this.router.navigate(['/alumno'], navigationExtras);
 
-      }else if(this.user.usuario.includes("@profesor.duoc.cl")){
+      }else if(this.user.usuario.includes("@profesor.duoc.cl") && this.user.password != ""){
         let navigationExtras: NavigationExtras = {
           state: { user: this.user }
         }

@@ -23,7 +23,7 @@
               placeholder="Ingrese su Usuario"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input [(ngModel)]="user.password" label="Contraseña" type="Contraseña" labelPlacement="floating"
+            <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
               placeholder="Ingrese su Contraseña">
             </ion-input>
           </ion-item>
@@ -31,7 +31,7 @@
             <ion-toggle aria-label="Success toggle" color="success" [checked]="true">Recuerdame</ion-toggle>
           </ion-item><br>
           <!-- --------------------------- -->
-          <ion-button expand="block" color="warning" id="conectar" (click)="enviarInformacion()" size="small" shape="round">Iniciar Sesión</ion-button><br>
+          <ion-button expand="block" color="warning" id="conectar" (click)="enviarInformacion()"  shape="round">Iniciar Sesión</ion-button><br>
           <br>
           <!-- --------------------------- -->
           <ion-button id="present-alert" size="small" shape="round" > Recuperar Contraseña </ion-button>
