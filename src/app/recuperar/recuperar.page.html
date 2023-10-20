@@ -32,11 +32,16 @@
       <div class="container">
         <ion-card-title>Restablecer Contraseña</ion-card-title>
         <ion-list>
+          <ion-item>
+            <ion-label position="floating">Ingrese Email</ion-label>
+            <ion-input [(ngModel)]="Contra.Mail" type="label" labelPlacement="floating"
+            placeholder="Ingrese su correo"> </ion-input>
+          </ion-item>
           <!--  -->
           <ion-item>
             <ion-label position="floating">Nueva Contraseña</ion-label>
-            <ion-input [(ngModel)]="Contra.Nueva" labelPlacement="floating"
-            placeholder="Ingrese su Usuario"> </ion-input>
+            <ion-input [(ngModel)]="Contra.Nueva" type="password" labelPlacement="floating"
+            placeholder="Ingrese su nueva Contraseña"> </ion-input>
           </ion-item>
           <!--  -->
           <ion-item>
@@ -47,6 +52,7 @@
           </ion-item>   
           <!--  --> 
           <ion-button expand="block" color="warning" id="conectar" (click)="Validacion()"  shape="round">Restablecer</ion-button><br>
+          <ion-label>{{this.mensaje}}</ion-label>
           <br>
         </ion-list>
       </div>    
@@ -54,15 +60,5 @@
         
       </ion-card-content>
     </ion-card>
-
-    <!-- <ion-alert
-      trigger="present-alert"
-      header="Clase registrada"
-      subHeader="Haz sido registrado en la clase correctamente. "
-      message="¡Ya estas presente el dia de hoy!"
-      cssClass="alert-multiline"
-      [buttons]="alertButtons"
-    > 
-  </ion-alert> -->
   </ion-content>
 </div>

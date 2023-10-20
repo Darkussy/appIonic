@@ -18,21 +18,26 @@ export class RecuperarPage implements OnInit {
   public mensaje =""
 
   Contra={
+    Mail:"",
     Nueva:"",
     Confirmacion:""
   }
   
   Validacion(){
-    if(this.Contra.Nueva !="" && this.Contra.Confirmacion !=""){
-      if(this.Contra.Nueva == this.Contra.Confirmacion ){
-        this.mensaje ="Debe ingresar su nueva contraseña";
-        this.router.navigate(['/home']);
-
+    if(this.Contra.Mail !=""){
+      if(this.Contra.Nueva !="" && this.Contra.Confirmacion !=""){
+        if(this.Contra.Nueva == this.Contra.Confirmacion ){
+          this.mensaje ="Contraseña modificada correctamente";
+          this.router.navigate(['/home']);
+  
+        }else{
+          this.mensaje ="Las contraseñas deben coincidir";
+        }
       }else{
-        this.mensaje ="Las contraseñas deben coincidir";
+        this.mensaje ="Debe ingresar su nueva contraseña";
       }
     }else{
-      this.mensaje ="Debe ingresar su nueva contraseña";
+      this.mensaje ="Debe ingresar su mail";
     }
   }
 
