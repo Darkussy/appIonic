@@ -31,7 +31,11 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
+  },  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   }
+
 
 
 
