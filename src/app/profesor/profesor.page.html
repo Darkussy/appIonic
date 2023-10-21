@@ -53,20 +53,28 @@
 
   <ion-content class="ion-padding">
     <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Bienvenido Usuario: </ion-card-subtitle>
+        <ion-card-title class="usuario">{{user.usuario}}</ion-card-title>
+      </ion-card-header>
+      
       <div class="container">
         <img
           class="img_qr"
           alt="Silhouette of mountains"
-          src="../../assets/icon/Img_profe.png"
+          src="../assets/icon/Img_profe.png"
         />
       </div>
       <ion-card-content>
-        <div>
-        <!--  -->
-        <ion-datetime presentation="date-time" [preferWheel]="true"></ion-datetime>
-        <!--  -->  
+        <div class="container">
+          <!-- seleccion de fecha clase -->
+          <ion-datetime
+            presentation="date-time"
+            [preferWheel]="true"
+          ></ion-datetime>
+          <!--  -->
         </div>
-        
+
         <ion-button
           expand="block"
           color="warning"
@@ -74,7 +82,7 @@
           class="warning"
           shape="round"
         >
-          Registrar Clase
+          Generar registro Clase
         </ion-button>
         <!--  -->
       </ion-card-content>
