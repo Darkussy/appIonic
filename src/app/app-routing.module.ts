@@ -26,14 +26,14 @@ const routes: Routes = [
     path: 'recuperar',
     loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
   },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
   //este tiene que ir al ultimo para que no genere errores cuando se ejecute el proyecto 
-  
   {
     path: '**',
     loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
-  },  {
-    path: 'registro',
-    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   }
 
 

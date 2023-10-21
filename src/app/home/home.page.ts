@@ -14,6 +14,8 @@ export class HomePage {
   
   @ViewChild(IonModal) modal!: IonModal;
 
+  
+
   constructor(private router: Router) {}
   public mensaje = ""
   public alertButtons = [
@@ -75,5 +77,8 @@ export class HomePage {
     this.modal.dismiss(this.user.usuario, 'confirm');
   }
 
+  registrate(){
+      this.router.navigate(['/registro']);
+  }
 }
 
